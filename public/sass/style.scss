@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(16, 16, 83);
+}
+
+@mixin form-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh; 
+}
+
+@mixin form {
+    form{
+        color: whitesmoke;
+        // background-color: rgb(240, 239, 239);
+        border: 1px solid grey;
+        // box-shadow: 2px 2px 3px 2px rgba(242, 242, 245, 0.9), 
+        //             -2px 2px 3px 2px rgba(241, 241, 243, 0.9),
+        //             2px -2px 3px 2px rgba(241, 241, 243, 0.9);
+        padding: 20px;
+        width: 600px;
+        .input-group{
+            margin: 10px 0px 10px 0px;
+            display: grid;
+            input{
+                padding: 10px;
+                outline: none;
+                background-color: white;
+                color: black;
+                &:focus{
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        .button-group{
+            display: flex;
+            gap: 20px;
+            button{
+                flex: 1;
+                padding: 10px;
+                border: none;
+                outline: none;
+                &[type=reset]{
+                    background-color: pink;
+                }
+                &[type=submit]{
+                    background-color: green;
+                    color: white
+                }
+            }
+        }
+        .form-links{
+            margin-top: 20px;
+            &>a{
+                color: white;
+            }
+        }
+    }   
+}
+
+.register-container, .login-container{
+    @include form-container();
+    @include form();
+}
+.valid{
+    padding: 10px;
+    background-color: rgb(2, 160, 2);
+    border: 1px solid green;
+    color: white;
+    span{
+        background-color: transparent;
+    }
+    .close{
+        color: white;
+        border: 1px solid rgb(4, 34, 4);
+    }
+}
+.invalid{
+    padding: 10px;
+    background-color: lighten(red,40%);
+    color: black;
+    span{
+        background-color: transparent;
+    }
+    .close{
+        color: red;
+        border: 1px solid rgb(230, 109, 109);
+    }
+}
+.message{
+    transition: all 0.2s linear;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .msg{
+        &::first-letter{text-transform: uppercase;}   
+    }
+    .close{
+       width: 20px;
+       height: 20px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border-radius: 50%;
+
+    }
+}

@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(16, 16, 83);
+}
+
+.register-container, .login-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.register-container form, .login-container form {
+  color: whitesmoke;
+  border: 1px solid grey;
+  padding: 20px;
+  width: 600px;
+}
+.register-container form .input-group, .login-container form .input-group {
+  margin: 10px 0px 10px 0px;
+  display: grid;
+}
+.register-container form .input-group input, .login-container form .input-group input {
+  padding: 10px;
+  outline: none;
+  background-color: white;
+  color: black;
+}
+.register-container form .input-group input:focus, .login-container form .input-group input:focus {
+  background-color: white;
+  color: black;
+}
+.register-container form .button-group, .login-container form .button-group {
+  display: flex;
+  gap: 20px;
+}
+.register-container form .button-group button, .login-container form .button-group button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.register-container form .button-group button[type=reset], .login-container form .button-group button[type=reset] {
+  background-color: pink;
+}
+.register-container form .button-group button[type=submit], .login-container form .button-group button[type=submit] {
+  background-color: green;
+  color: white;
+}
+.register-container form .form-links, .login-container form .form-links {
+  margin-top: 20px;
+}
+.register-container form .form-links > a, .login-container form .form-links > a {
+  color: white;
+}
+
+.valid {
+  padding: 10px;
+  background-color: rgb(2, 160, 2);
+  border: 1px solid green;
+  color: white;
+}
+.valid span {
+  background-color: transparent;
+}
+.valid .close {
+  color: white;
+  border: 1px solid rgb(4, 34, 4);
+}
+
+.invalid {
+  padding: 10px;
+  background-color: #ffcccc;
+  color: black;
+}
+.invalid span {
+  background-color: transparent;
+}
+.invalid .close {
+  color: red;
+  border: 1px solid rgb(230, 109, 109);
+}
+
+.message {
+  transition: all 0.2s linear;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.message .msg::first-letter {
+  text-transform: uppercase;
+}
+.message .close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

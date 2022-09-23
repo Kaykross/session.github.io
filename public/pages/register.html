@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/style.css">
+    <script defer src="../js/register.app.js" type="module"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="register-container">
+        <form >
+            <div class="message"></div>
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" autocapitalize="name" autocomplete="username">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" autocomplete="new-password">
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm password" id="confirm-password" autocomplete="new-password" >
+            </div>
+            <div class="button-group">
+                <button type="reset">Reset</button>
+                <button id="btn-register" type="submit">Submit</button>
+            </div>
+            <div class="form-links"><a href="/login">Login</a></div>
+        </form>
+    </div>  
+</body>
+</html>
